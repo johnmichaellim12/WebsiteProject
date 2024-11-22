@@ -1,0 +1,129 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif; /* Default font */
+  background-color: #043873; /* Background color */
+  color: white; /* Default text color */
+}
+
+/* Header Styling */
+.navbar {
+  width: 1920px;
+  height: auto;
+  padding: 16px 220px;
+  background-color: #043873;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Styling */
+.logo {
+  width: 191px; /* Fixed width */
+  height: auto; /* Ensure the height adapts */
+}
+
+.logo img {
+  width: 37px; /* Scale to the logo's container */
+  height: 29px;
+  top: 2.5px;
+}
+
+/* Main Menu Styling */
+.main-menu {
+  width: auto; /* Fixed width */
+  height: auto; /* Fixed height */
+  display: flex;
+  justify-content: space-between; /* Space between nav menu and buttons */
+  align-items: center; /* Center vertically */
+  gap: 60px; /* Space between nav-menu and buttons */
+}
+
+/* Nav Menu Styling */
+.nav-menu {
+  width: 551.5px; /* Fixed width */
+  height: auto; /* Hug height */
+  display: flex;
+}
+
+.nav-menu-font ul {
+  display: flex;
+  list-style: none; /* Remove default bullet points */
+  margin: 0;
+  padding: 0;
+  gap: 32px; /* Space between items */
+}
+
+.nav-menu-font ul li a {
+  font-family: "DM Sans", sans-serif; /* Font */
+  font-size: 16px; /* Font size */
+  font-weight: 500; /* Medium weight */
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline */
+}
+
+.nav-menu-font ul li a i {
+  width: 9px;
+  height: 4px;
+  border: 1px;
+  gap: 10px;
+  padding-left: 10px;
+}
+
+/* Buttons Styling */
+.nav-btn {
+  display: flex;
+  gap: 24px; /* Space between buttons */
+  height: 60px; /* Fixed height */
+  width: auto;
+}
+
+.nav-btn .login-btn {
+  width: auto;
+  height: 60px;
+  border-radius: 8px;
+  padding: 16px 40px;
+  cursor: pointer;
+  gap: 10px;
+  background-color: #ffe492;
+}
+
+.nav-btn .try-free-btn {
+  width: auto;
+  height: 60px;
+  border-radius: 8px; /* Rounded corners */
+  padding: 16px 24px; /* Button padding */
+  gap: 10px;
+  cursor: pointer;
+  background-color: #4f9cf9; /* Light blue background */
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Text Classes */
+
+.p2-md-int {
+  width: 46px;
+  height: 23px;
+  font-family: "Intern", sans-serif; /* Apply Inter font */
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  text-decoration: none; /* Remove underline */
+  color: #043873; /* White text color */
+  letter-spacing: -0.02em; /* Implement the -2% letter spacing */
+}
+
+.text-lg-logo {
+  width: 144px;
+  height: 34px;
+  left: 47px;
+  font-family: "Intern", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33.89px;
+}
