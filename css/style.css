@@ -13,7 +13,7 @@ body {
 
 /* Header Styling */
 .navbar {
-  width: 1920px;
+  width: auto;
   height: auto;
   padding: 16px 220px;
   background-color: #043873;
@@ -23,21 +23,38 @@ body {
 }
 
 /* Logo Styling */
+
 .logo {
-  width: 191px; /* Fixed width */
-  height: auto; /* Ensure the height adapts */
+  display: flex; /* Aligns image and text horizontally */
+  align-items: center; /* Ensures vertical alignment */
+  width: 191px; /* Matches your Figma requirement */
+  height: 34px; /* Matches your Figma requirement */
+}
+
+.text-lg-logo a {
+  display: flex;
+  position: relative; /* Enables left to work */
+  justify-content: space-between;
+  left: 47px; /* Moves the text to the right */
+  font-family: "Intern", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33.89px;
+  color: #ffffff; /* Text color */
+  align-items: center; /* Ensures vertical alignment */
+  text-decoration: none; /* Removes underline from the link */
+  gap: 10px; /* Adds 47px space between the image and text */
 }
 
 .logo img {
-  width: 37px; /* Scale to the logo's container */
+  width: 37px;
   height: 29px;
-  top: 2.5px;
+  top: 2.5px; /* Adjusts vertical alignment */
 }
 
 /* Main Menu Styling */
 .main-menu {
-  width: auto; /* Fixed width */
-  height: auto; /* Fixed height */
+  height: 60px; /* Fixed height */
   display: flex;
   justify-content: space-between; /* Space between nav menu and buttons */
   align-items: center; /* Center vertically */
@@ -46,9 +63,9 @@ body {
 
 /* Nav Menu Styling */
 .nav-menu {
-  width: 551.5px; /* Fixed width */
-  height: auto; /* Hug height */
+  height: 60px; /* Hug height */
   display: flex;
+  gap: 32px;
 }
 
 .nav-menu-font ul {
@@ -56,13 +73,15 @@ body {
   list-style: none; /* Remove default bullet points */
   margin: 0;
   padding: 0;
+  align-items: center;
   gap: 32px; /* Space between items */
 }
 
 .nav-menu-font ul li a {
   font-family: "DM Sans", sans-serif; /* Font */
-  font-size: 16px; /* Font size */
+  font-size: 18px; /* Font size */
   font-weight: 500; /* Medium weight */
+  line-height: 23px;
   color: white; /* Text color */
   text-decoration: none; /* Remove underline */
 }
@@ -72,7 +91,7 @@ body {
   height: 4px;
   border: 1px;
   gap: 10px;
-  padding-left: 10px;
+  padding: 10px;
 }
 
 /* Buttons Styling */
@@ -93,15 +112,48 @@ body {
   background-color: #ffe492;
 }
 
+.nav-btn .login-btn p {
+  font-family: "Intern", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  text-decoration: none;
+  color: #043873; /* Blue text */
+  letter-spacing: -0.02em; /* -2% letter spacing */
+}
+
 .nav-btn .try-free-btn {
-  width: auto;
-  height: 60px;
+  display: flex; /* Flex layout for text and icon */
+  align-items: center; /* Center text and icon vertically */
+  justify-content: center; /* Center content horizontally */
+  gap: 10px; /* Space between text and icon */
+  width: auto; /* Dynamic width */
+  height: 60px; /* Fixed height */
   border-radius: 8px; /* Rounded corners */
-  padding: 16px 24px; /* Button padding */
-  gap: 10px;
+  padding: 0 24px; /* Horizontal padding */
   cursor: pointer;
   background-color: #4f9cf9; /* Light blue background */
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
+  text-decoration: none; /* Remove underline */
+}
+
+.nav-btn .try-free-btn p {
+  width: 160px;
+  height: 23px;
+  font-family: "Intern", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  text-decoration: none;
+  color: #ffffff; /* White text */
+  letter-spacing: -0.02em; /* -2% letter spacing */
+}
+
+.nav-btn .try-free-btn i {
+  display: inline-block;
+  color: #ffffff; /* White icon color */
+  margin: 0px; /* Space between text and icon */
+  font-size: 16px; /* Adjust icon size if needed */
 }
 
 /* Text Classes */
@@ -116,14 +168,4 @@ body {
   text-decoration: none; /* Remove underline */
   color: #043873; /* White text color */
   letter-spacing: -0.02em; /* Implement the -2% letter spacing */
-}
-
-.text-lg-logo {
-  width: 144px;
-  height: 34px;
-  left: 47px;
-  font-family: "Intern", sans-serif;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 33.89px;
 }
