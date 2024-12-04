@@ -11,6 +11,14 @@ body {
   color: white; /* Default text color */
 }
 
+.diflex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
 /* Header Styling */
 .navbar {
   width: auto;
@@ -121,23 +129,23 @@ body {
   color: #043873; /* Blue text */
   letter-spacing: -0.02em; /* -2% letter spacing */
 }
-
-.nav-btn .try-free-btn {
-  display: flex; /* Flex layout for text and icon */
-  align-items: center; /* Center text and icon vertically */
+.btn-free-trial {
+  display: block; /* Flex layout for text and icon */
+  align-items: center; /* Center content vertically */
   justify-content: center; /* Center content horizontally */
   gap: 10px; /* Space between text and icon */
-  width: auto; /* Dynamic width */
-  height: 60px; /* Fixed height */
+  /* Allow dynamic width */
+  height: 60px; /* Fixed height for the button */
   border-radius: 8px; /* Rounded corners */
-  padding: 0 24px; /* Horizontal padding */
-  cursor: pointer;
+  padding: 16px 24px; /* Internal spacing */
+  cursor: pointer; /* Pointer on hover */
   background-color: #4f9cf9; /* Light blue background */
   transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
-  text-decoration: none; /* Remove underline */
+  color: #ffffff; /* Text color */
+  text-decoration: none; /* Remove underline from links */
 }
 
-.nav-btn .try-free-btn p {
+/* .nav-btn .try-free-btn p {
   width: 160px;
   height: 23px;
   font-family: "Intern", sans-serif;
@@ -146,26 +154,74 @@ body {
   line-height: 23px;
   text-decoration: none;
   color: #ffffff; /* White text */
-  letter-spacing: -0.02em; /* -2% letter spacing */
+/* letter-spacing: -0.02em; -2% letter spacing  
+} */
+
+/* Hero */
+.hero {
+  height: 901.44px;
+  padding: 140px 220px;
+  background: #043873;
 }
 
-.nav-btn .try-free-btn i {
-  display: inline-block;
-  color: #ffffff; /* White icon color */
-  margin: 0px; /* Space between text and icon */
-  font-size: 16px; /* Adjust icon size if needed */
+.hero .hero-text {
+  align-self: center;
 }
+
+.hero-bg {
+  z-index: -1;
+}
+
+.hero-btn .try-free-btn p {
+  width: 219px;
+  height: 63px;
+  border-radius: 8px;
+  padding: 20px;
+  gap: 10px;
+}
+
+/* .hero-content {
+  z-index: 1;
+} */
 
 /* Text Classes */
 
 .p2-md-int {
-  width: 46px;
+  width: 170px;
   height: 23px;
   font-family: "Intern", sans-serif; /* Apply Inter font */
   font-weight: 500;
   font-size: 18px;
   line-height: 23px;
+  letter-spacing: -2%; /* Implement the -2% letter spacing */
   text-decoration: none; /* Remove underline */
-  color: #043873; /* White text color */
-  letter-spacing: -0.02em; /* Implement the -2% letter spacing */
+  color: #fff;
+}
+
+.h2-text {
+  font-family: "Intern", sans-serif;
+  width: 656px;
+  height: 154px;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77.45px;
+  letter-spacing: -2%;
+}
+
+.p2-rg-int {
+  width: 656px;
+  height: 60px;
+  font-family: "Inter" sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -2%;
+}
+
+.fa-arrow-right {
+  width: auto;
+  height: auto;
+  gap: 4px;
+  display: inline-block;
+  color: #ffffff; /* White icon color */
 }
