@@ -1,4 +1,4 @@
-/* Basic Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,222 +6,277 @@
 }
 
 body {
-  font-family: "Inter", sans-serif; /* Default font */
-  background-color: #043873; /* Background color */
-  color: white; /* Default text color */
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  background-color: #043873;
 }
 
-.diflex {
+/* Utility Classes */
+.flex {
   display: flex;
 }
-
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-space-between {
+  justify-content: space-between;
+  align-items: center;
+}
 .flex-1 {
   flex: 1;
 }
+.gap-16 {
+  gap: 16px;
+}
+.gap-24 {
+  gap: 24px;
+}
 
-/* Header Styling */
+/* Navbar */
 .navbar {
-  width: auto;
-  height: auto;
   padding: 16px 220px;
   background-color: #043873;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
-
-/* Logo Styling */
-
-.logo {
-  display: flex; /* Aligns image and text horizontally */
-  align-items: center; /* Ensures vertical alignment */
-  width: 191px; /* Matches your Figma requirement */
-  height: 34px; /* Matches your Figma requirement */
-}
-
-.text-lg-logo a {
-  display: flex;
-  position: relative; /* Enables left to work */
   justify-content: space-between;
-  left: 47px; /* Moves the text to the right */
-  font-family: "Intern", sans-serif;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 33.89px;
-  color: #ffffff; /* Text color */
-  align-items: center; /* Ensures vertical alignment */
-  text-decoration: none; /* Removes underline from the link */
-  gap: 10px; /* Adds 47px space between the image and text */
 }
 
-.logo img {
-  width: 37px;
-  height: 29px;
-  top: 2.5px; /* Adjusts vertical alignment */
-}
-
-/* Main Menu Styling */
+/* frame 375 */
 .main-menu {
-  height: 60px; /* Fixed height */
   display: flex;
-  justify-content: space-between; /* Space between nav menu and buttons */
-  align-items: center; /* Center vertically */
-  gap: 60px; /* Space between nav-menu and buttons */
+  justify-content: space-between;
+  gap: 60px;
 }
 
-/* Nav Menu Styling */
+/* nav-menu */
 .nav-menu {
-  height: 60px; /* Hug height */
+  width: 551.5px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 32px;
 }
 
-.nav-menu-font ul {
+.logo {
   display: flex;
-  list-style: none; /* Remove default bullet points */
-  margin: 0;
-  padding: 0;
+  justify-content: space-between;
+}
+
+.logo a {
+  display: flex;
   align-items: center;
-  gap: 32px; /* Space between items */
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33.89px;
+  color: #fff;
+  margin-right: 47px;
 }
 
-.nav-menu-font ul li a {
-  font-family: "DM Sans", sans-serif; /* Font */
-  font-size: 18px; /* Font size */
-  font-weight: 500; /* Medium weight */
-  line-height: 23px;
-  color: white; /* Text color */
-  text-decoration: none; /* Remove underline */
+.logo img {
+  margin-top: 2.5px;
+  margin-right: 10px;
 }
 
-.nav-menu-font ul li a i {
-  width: 9px;
-  height: 4px;
-  border: 1px;
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+/* Product, Solutions, Resources, Pricing */
+.nav-menu li {
   gap: 10px;
+}
+
+.nav-menu li a {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* down-arrow */
+.nav-menu li a i {
   padding: 10px;
 }
 
-/* Buttons Styling */
+/* btn */
+
 .nav-btn {
   display: flex;
-  gap: 24px; /* Space between buttons */
-  height: 60px; /* Fixed height */
-  width: auto;
-}
-
-.nav-btn .login-btn {
-  width: auto;
   height: 60px;
+  gap: 24px;
+}
+
+.login-btn {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: -0.02em; /* Matches letter spacing of -2% */
+  color: #043873; /* Adjust as per your design */
+  text-decoration: none;
+  padding: 16px 40px; /* Add padding for better click area */
   border-radius: 8px;
-  padding: 16px 40px;
-  cursor: pointer;
-  gap: 10px;
   background-color: #ffe492;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-.nav-btn .login-btn p {
-  font-family: "Intern", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 23px;
-  text-decoration: none;
-  color: #043873; /* Blue text */
-  letter-spacing: -0.02em; /* -2% letter spacing */
-}
 .btn-free-trial {
-  display: block; /* Flex layout for text and icon */
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
-  gap: 10px; /* Space between text and icon */
-  /* Allow dynamic width */
-  height: 60px; /* Fixed height for the button */
-  border-radius: 8px; /* Rounded corners */
-  padding: 16px 24px; /* Internal spacing */
-  cursor: pointer; /* Pointer on hover */
-  background-color: #4f9cf9; /* Light blue background */
-  transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
-  color: #ffffff; /* Text color */
-  text-decoration: none; /* Remove underline from links */
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: -0.02em; /* Matches letter spacing of -2% */
+  background-color: #4f9cf9;
+  padding: 16px 24px;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
 }
 
-/* .nav-btn .try-free-btn p {
-  width: 160px;
-  height: 23px;
-  font-family: "Intern", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 23px;
-  text-decoration: none;
-  color: #ffffff; /* White text */
-/* letter-spacing: -0.02em; -2% letter spacing  
-} */
+.btn-free-trial:hover {
+  background-color: #357dd9;
+}
 
 /* Hero */
-.hero {
-  height: 901.44px;
-  padding: 140px 220px;
-  background: #043873;
-}
 
-.hero .hero-text {
-  align-self: center;
+.hero {
+  position: relative; /* Enables the positioning context for child elements */
+  margin-top: 92px;
+  padding: 40px 220px;
+  overflow: hidden; /* Ensures no extra space is rendered around the background */
 }
 
 .hero-bg {
-  z-index: -1;
+  display: flex;
+  position: absolute; /* Positions the image relative to the .hero container */
+  top: 90px;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: -1; /* Places it behind the hero content */
+  object-fit: cover; /* Ensures the image covers the area proportionally */
 }
 
-.hero-btn .try-free-btn p {
-  width: 219px;
-  height: 63px;
-  border-radius: 8px;
-  padding: 20px;
-  gap: 10px;
+.hero-header {
+  display: flex;
+  align-items: flex-start; /* Ensures both heading and image align to the top */
+  justify-items: center;
 }
 
-/* .hero-content {
-  z-index: 1;
-} */
-
-/* Text Classes */
-
-.p2-md-int {
-  width: 170px;
-  height: 23px;
-  font-family: "Intern", sans-serif; /* Apply Inter font */
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 23px;
-  letter-spacing: -2%; /* Implement the -2% letter spacing */
-  text-decoration: none; /* Remove underline */
-  color: #fff;
-}
-
-.h2-text {
-  font-family: "Intern", sans-serif;
+.hero-header .heading {
+  margin-top: 100px;
   width: 656px;
-  height: 154px;
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 77.45px;
-  letter-spacing: -2%;
+  gap: 60px;
 }
 
-.p2-rg-int {
-  width: 656px;
-  height: 60px;
-  font-family: "Inter" sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  letter-spacing: -2%;
+.header-h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 64px; /* Font size as specified */
+  font-weight: 700; /* Bold weight */
+  line-height: 77.45px; /* Matches the specified line height */
+  letter-spacing: -0.02em; /* Adjusts spacing between letters */
+  text-align: left; /* Align text to the left */
+  text-underline-position: from-font; /* Default underline position */
+  text-decoration-skip-ink: none; /* Ensures underline doesn't skip through characters */
+  margin-bottom: 30px;
 }
 
-.fa-arrow-right {
-  width: auto;
-  height: auto;
+.paragraph-p2 {
+  font-family: "Inter", sans-serif; /* Use the Inter font family */
+  font-size: 18px; /* Font size as specified */
+  font-weight: 400; /* Regular font weight */
+  line-height: 30px; /* Line height */
+  letter-spacing: -0.02em; /* Adjusts letter spacing */
+  text-align: left; /* Align text to the left */
+  text-underline-position: from-font; /* Default underline position */
+  text-decoration-skip-ink: none; /* Ensures underline doesn't skip characters */
+  margin-bottom: 60px;
+}
+
+.heading .btn-free-trial {
+  width: 250px;
+}
+
+.hero-image {
+  display: flex;
+  align-self: flex-start; /* Align the hero image to the top */
+  padding: 0; /* Ensure no unnecessary padding */
+  max-width: 100%; /* Adjust width to keep responsiveness */
+}
+
+.hero-image img {
+  width: 100%; /* Ensure the image adjusts to the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Keeps the image properly contained */
   gap: 4px;
-  display: inline-block;
-  color: #ffffff; /* White icon color */
+}
+
+/* Work Management */
+
+.wm-s2 {
+  width: 1920px;
+  top: 921px;
+  padding: 140px 220px;
+  gap: 100px;
+  background-color: #fff;
+  position: relative; /* Enables the positioning context for child elements */
+  overflow: hidden; /* Ensures no extra space is rendered around the background */
+}
+
+.pm {
+  display: flex;
+  position: absolute; /* Positions the image relative to the .hero container */
+  align-items: center;
+  margin-top: 115px;
+  justify-content: center;
+  z-index: 0; /* Places it behind the hero content */
+  object-fit: cover; /* Ensures the image covers the area proportionally */
+}
+
+.wm-c1-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.wm-s2 .wm-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-h1-text {
+  font-family: "Inter", sans-serif; /* Use Inter font family */
+  font-size: 72px; /* Font size for H1 */
+  font-weight: 700; /* Bold font weight */
+  line-height: 87.14px; /* Line height for proper spacing */
+  letter-spacing: -0.02em; /* Adjust letter spacing */
+  text-align: left; /* Align text to the left */
+  text-underline-position: from-font; /* Default underline position */
+  text-decoration-skip-ink: none; /* Prevent underline skips */
+  color: #212529; /* Add a color to make it visible (adjust as needed) */
+}
+
+.p2-rg-int-c1 {
+  font-family: "Inter", sans-serif; /* Use the Inter font family */
+  font-size: 18px; /* Font size */
+  font-weight: 400; /* Regular font weight */
+  line-height: 30px; /* Line height for readability */
+  letter-spacing: -0.02em; /* Adjust letter spacing */
+  text-align: left; /* Align text to the left */
+  text-underline-position: from-font; /* Default underline position */
+  text-decoration-skip-ink: none; /* Prevent underline skips */
+  color: #212529; /* Adjust the text color as needed */
 }
