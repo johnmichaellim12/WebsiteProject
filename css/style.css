@@ -7,17 +7,17 @@
 
 body {
   font-family: "Inter", sans-serif;
-  color: #fff;
-  background-color: #043873;
 }
 
 /* Utility Classes */
 .flex {
   display: flex;
 }
-.flex-center {
-  justify-content: center;
+.align-items-center {
   align-items: center;
+}
+.justify-content-center {
+  justify-content: center;
 }
 .flex-space-between {
   justify-content: space-between;
@@ -31,6 +31,10 @@ body {
 }
 .gap-24 {
   gap: 24px;
+}
+
+.fa-arrow-right {
+  margin-top: 3px;
 }
 
 /* Navbar */
@@ -153,33 +157,47 @@ body {
 /* Hero */
 
 .hero {
-  position: relative; /* Enables the positioning context for child elements */
-  margin-top: 92px;
-  padding: 40px 220px;
-  overflow: hidden; /* Ensures no extra space is rendered around the background */
+  position: relative; /* Establishes a positioning context for child elements */
+  display: flex;
+  align-items: center;
+  height: 901.44px; /* Hug height allows flexibility with content size */
+  padding: 140px 220px; /* Applies even padding on top, right, bottom, and left */
+  overflow: hidden; /* Hides any content that overflows the container */
+  display: flex; /* For layout control if needed */
+  flex-direction: column; /* Stacks child elements vertically */
+  gap: 0px; /* Ensures no additional spacing between child elements */
+  background: #043873;
+  z-index: 1;
 }
 
 .hero-bg {
   display: flex;
   position: absolute; /* Positions the image relative to the .hero container */
-  top: 90px;
-  left: 0;
-  align-items: center;
-  justify-content: center;
+  top: 180px;
+
   z-index: -1; /* Places it behind the hero content */
   object-fit: cover; /* Ensures the image covers the area proportionally */
 }
 
 .hero-header {
   display: flex;
-  align-items: flex-start; /* Ensures both heading and image align to the top */
   justify-items: center;
+  color: #fff;
 }
 
-.hero-header .heading {
-  margin-top: 100px;
-  width: 656px;
-  gap: 60px;
+.heading {
+  width: 656px; /* Fixed width */
+  height: auto; /* Hug height, adjusts dynamically to the content */
+  display: flex; /* Flexbox for layout control */
+  flex-direction: column; /* Stack child elements vertically */
+  gap: 60px; /* Defines the vertical spacing between child elements */
+  text-align: left; /* Align content to the left */
+  margin-top: 103px;
+  margin-right: 50px;
+}
+
+.hero-image {
+  width: 100%;
 }
 
 .header-h2 {
@@ -191,7 +209,6 @@ body {
   text-align: left; /* Align text to the left */
   text-underline-position: from-font; /* Default underline position */
   text-decoration-skip-ink: none; /* Ensures underline doesn't skip through characters */
-  margin-bottom: 30px;
 }
 
 .paragraph-p2 {
@@ -203,7 +220,6 @@ body {
   text-align: left; /* Align text to the left */
   text-underline-position: from-font; /* Default underline position */
   text-decoration-skip-ink: none; /* Ensures underline doesn't skip characters */
-  margin-bottom: 60px;
 }
 
 .heading .btn-free-trial {
@@ -227,10 +243,11 @@ body {
 /* Work Management */
 
 .wm-s2 {
-  width: 1920px;
-  top: 921px;
+  display: flex; /* For layout control */
+  flex-direction: column; /* Aligns child elements horizontally */
+  align-items: center; /* Vertically center items within the row */
   padding: 140px 220px;
-  gap: 100px;
+  gap: 100px; /* Space between child elements */
   background-color: #fff;
   position: relative; /* Enables the positioning context for child elements */
   overflow: hidden; /* Ensures no extra space is rendered around the background */
@@ -242,7 +259,22 @@ body {
   align-items: center;
   margin-top: 115px;
   justify-content: center;
-  z-index: 0; /* Places it behind the hero content */
+  left: 12%;
+  z-index: 2; /* Places it behind the hero content */
+
+  overflow: hidden; /* Ensures no extra space is rendered around the background */
+  width: 678.74px;
+  height: 65.55px;
+}
+
+.wm-s2 .s2-bg {
+  display: flex;
+  position: absolute; /* Positions the image relative to the .hero container */
+  align-items: center;
+  margin-top: 55px;
+  left: 0%;
+  justify-content: center;
+  z-index: 1; /* Places it behind the hero content */
   object-fit: cover; /* Ensures the image covers the area proportionally */
 }
 
@@ -250,11 +282,30 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  z-index: 3;
+  margin-bottom: 100px;
+}
+
+.wm-c2-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 3;
 }
 
 .wm-s2 .wm-container {
+  display: flex; /* For layout control */
+  flex-direction: column; /* Aligns child elements horizontally */
+  align-items: center; /* Vertically center items within the row */
+}
+
+.wm-text {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px; /* Space between elements */
+  margin-right: 70px;
 }
 
 .header-h1-text {
@@ -270,13 +321,374 @@ body {
 }
 
 .p2-rg-int-c1 {
-  font-family: "Inter", sans-serif; /* Use the Inter font family */
+  font-family: "Inter", sans-serif; /* Font family */
   font-size: 18px; /* Font size */
   font-weight: 400; /* Regular font weight */
   line-height: 30px; /* Line height for readability */
-  letter-spacing: -0.02em; /* Adjust letter spacing */
+  letter-spacing: -0.02em; /* Slightly tighter spacing */
+  text-align: left; /* Align text to the left */
+  color: #212529; /* Neutral dark color for text */
+  text-underline-position: auto; /* Natural underline positioning */
+  text-decoration-skip-ink: auto; /* Smooth underline skipping */
+  margin: 0; /* Remove default margins for flexibility */
+}
+
+.btn-gs {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: -0.02em; /* Matches letter spacing of -2% */
+  background-color: #4f9cf9;
+  padding: 20px 40px;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.c2-img {
+  margin-right: 80px;
+}
+
+.wm-margin-top {
+  margin-top: 150px;
+}
+
+.wt-element {
+  display: flex;
+  position: absolute; /* Positions the image relative to the .hero container */
+  align-items: center;
+  margin-top: 200px;
+  justify-content: center;
+  right: 15%;
+  z-index: -1; /* Places it behind the hero content */
+
+  overflow: hidden; /* Ensures no extra space is rendered around the background */
+  width: 400px;
+  height: 28.81px;
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px; /* Space between elements */
+}
+
+/* Use an Extension */
+
+.ue-s3 {
+  position: relative; /* Establishes a positioning context for child elements */
+  display: flex;
+  align-items: center;
+  height: 901.44px; /* Hug height allows flexibility with content size */
+  padding: 140px 220px; /* Applies even padding on top, right, bottom, and left */
+  overflow: hidden; /* Hides any content that overflows the container */
+  display: flex; /* For layout control if needed */
+  flex-direction: column; /* Stacks child elements vertically */
+  gap: 98px; /* Ensures no additional spacing between child elements */
+  background: #043873;
+  z-index: 1;
+}
+
+.head-s3 {
+  height: auto; /* Hug height, adjusts dynamically to the content */
+  display: flex; /* Flexbox for layout control */
+  flex-direction: column; /* Stack child elements vertically */
+  gap: 60px; /* Defines the vertical spacing between child elements */
+  text-align: left; /* Align content to the left */
+  margin-top: 103px;
+  margin-right: 50px;
+}
+
+.ue-s3 .btn-gs {
+  width: 173px;
+}
+
+/* Customize */
+
+.customize-s4 {
+  position: relative; /* Establishes a positioning context for child elements */
+  display: flex;
+  align-items: center;
+
+  padding: 140px 220px; /* Applies even padding on top, right, bottom, and left */
+  overflow: hidden; /* Hides any content that overflows the container */
+  display: flex; /* For layout control if needed */
+  flex-direction: column; /* Stacks child elements vertically */
+  gap: 98px; /* Ensures no additional spacing between child elements */
+
+  z-index: 1;
+}
+
+.head-s4 {
+  width: 1, 921px; /* Fixed width */
+  height: auto; /* Hug height, adjusts dynamically to the content */
+  display: flex; /* Flexbox for layout control */
+  flex-direction: column; /* Stack child elements vertically */
+  gap: 60px; /* Defines the vertical spacing between child elements */
+  text-align: left; /* Align content to the left */
+}
+
+.c-margin-left {
+  margin-left: 80px;
+}
+
+.customize-s4 .btn-gs {
+  width: 173px;
+}
+
+.img-s4 {
+  width: 843px;
+  height: 410px;
+  gap: 4px;
+}
+
+.c-element {
+  display: flex;
+  position: absolute; /* Positions the image relative to the .hero container */
+  align-items: center;
+  margin-top: 111px;
+  justify-content: center;
+  right: 13%;
+  z-index: -1; /* Places it behind the hero content */
+
+  overflow: hidden; /* Ensures no extra space is rendered around the background */
+  width: 523.32px;
+  height: 69.79px;
+}
+
+/* Pricing */
+
+.cyp {
+  position: relative; /* Establishes a positioning context for child elements */
+  display: flex;
+  align-items: center;
+  height: 1272px;
+  padding: 140px 220px; /* Applies even padding on top, right, bottom, and left */
+  overflow: hidden; /* Hides any content that overflows the container */
+  display: flex; /* For layout control if needed */
+  flex-direction: column; /* Stacks child elements vertically */
+  gap: 60px; /* Ensures no additional spacing between child elements */
+
+  z-index: 1;
+}
+
+.mid {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.cyp .p2-rg-int-c1 {
+  margin: 0px 250px;
+  text-align: center;
+}
+
+.price-list {
+  display: flex;
+  flex-direction: row;
+  padding: 140px 220px; /* Applies even padding on top, right, bottom, and left */
+
+  gap: 32px;
+}
+
+.price-board1 {
+  width: 472.33px;
+  border-radius: 10px;
+  border: 1px solid #ffe492; /* Add 'solid' to define the border style */
+  padding: 40px 44px;
+  gap: 25px;
+  background-color: #fff;
+}
+
+.price-board1 .btn-gs {
+  display: flex;
+  align-items: center;
+  width: 155px;
+  background-color: #fff;
+  border: 1px solid #ffe492; /* Add 'solid' to define the border style */
+  color: #212529;
+  padding: 16px 40px;
+  border-radius: 8px;
+}
+
+.price-board2 {
+  width: 472.33px;
+  border-radius: 10px;
+  border: 1px solid #ffe492; /* Add 'solid' to define the border style */
+  padding: 40px 44px;
+  gap: 25px;
+  background-color: #fff;
+}
+
+.price-board2 .btn-gs {
+  display: flex;
+  align-items: center;
+  width: 155px;
+  background-color: #fff;
+  border: 1px solid #ffe492; /* Add 'solid' to define the border style */
+  color: #212529;
+  padding: 16px 40px;
+  border-radius: 8px;
+}
+
+.price-board3 {
+  width: 472.33px;
+  border-radius: 10px;
+  border: 1px solid #ffe492; /* Add 'solid' to define the border style */
+  padding: 40px 44px;
+  gap: 25px;
+  background-color: #fff;
+}
+
+.price-board3 .btn-gs {
+  display: flex;
+  align-items: center;
+  width: 155px;
+  background-color: #fff;
+  border: 1px solid #ffe492; /* Add 'solid' to define the border style */
+  color: #212529;
+  padding: 16px 40px;
+  border-radius: 8px;
+}
+
+.p3-rg-int {
+  font-family: "Inter", sans-serif; /* Font family */
+  font-size: 16px; /* Font size */
+  font-weight: 400; /* Regular font weight */
+  line-height: 20px; /* Line height for readability */
+  letter-spacing: -0.02em; /* Slightly tighter spacing */
+  text-align: left; /* Align text to the left */
+  color: #212529; /* Neutral dark color for text */
+  text-underline-position: auto; /* Natural underline positioning */
+  text-decoration-skip-ink: auto; /* Smooth underline skipping */
+  margin: 0; /* Remove default margins for flexibility */
+}
+
+.bullet-point {
+  margin: 20px 0px;
+  display: flex; /* Flex container for vertical alignment */
+  flex-direction: column; /* Stacks list items vertically */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 28px; /* Space between elements */
+}
+
+.bullet-point ul {
+  display: flex; /* Makes the <ul> a flex container */
+  flex-direction: column; /* Arranges <li> elements in a column */
+  align-items: flex-start; /* Aligns items to the start of the container */
+  gap: 28px; /* Adds space between <li> items */
+  list-style: none; /* Removes default bullet points */
+}
+
+.bullet-point ul li {
+  display: flex; /* Makes the <li> a flex container */
+  align-items: center; /* Aligns icon and text vertically */
+  gap: 19px; /* Adds space between the icon (<i>) and the text (<p>) */
+}
+
+.text-block-cyp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px; /* Space between elements */
+}
+
+.p1-sb-int {
+  font-family: "Inter", sans-serif; /* Font family */
+  font-size: 24px; /* Font size */
+  font-weight: 600; /* Regular font weight */
+  line-height: 36px; /* Line height for readability */
+  text-align: left; /* Align text to the left */
+  color: #212529; /* Neutral dark color for text */
+  text-underline-position: auto; /* Natural underline positioning */
+  text-decoration-skip-ink: auto; /* Smooth underline skipping */
+  margin: 0; /* Remove default margins for flexibility */
+}
+
+.header-h4-text {
+  font-family: "Inter", sans-serif;
+  font-size: 36px; /* Font size as specified */
+  font-weight: 700; /* Bold weight */
+  line-height: 43.57px; /* Matches the specified line height */
+  letter-spacing: -0.02em; /* Adjusts spacing between letters */
   text-align: left; /* Align text to the left */
   text-underline-position: from-font; /* Default underline position */
-  text-decoration-skip-ink: none; /* Prevent underline skips */
-  color: #212529; /* Adjust the text color as needed */
+  text-decoration-skip-ink: none; /* Ensures underline doesn't skip through characters */
+}
+
+/* Your Work */
+
+.yw-s5 {
+  position: relative; /* Establishes a positioning context for child elements */
+  display: flex;
+  align-items: center;
+  height: 574px; /* Hug height allows flexibility with content size */
+  padding: 140px 220px; /* Applies even padding on top, right, bottom, and left */
+  overflow: hidden; /* Hides any content that overflows the container */
+  display: flex; /* For layout control if needed */
+  flex-direction: column; /* Stacks child elements vertically */
+  gap: 98px; /* Ensures no additional spacing between child elements */
+  background: #043873;
+  z-index: 1;
+}
+
+.head-s4 {
+  width: 1, 921px; /* Fixed width */
+  height: auto; /* Hug height, adjusts dynamically to the content */
+  display: flex; /* Flexbox for layout control */
+  flex-direction: column; /* Stack child elements vertically */
+  gap: 60px; /* Defines the vertical spacing between child elements */
+  text-align: center; /* Align content to the left */
+}
+
+.yw-s5 .p2-rg-int-c1 {
+  margin: 0px 220px;
+  text-align: center;
+  color: #fff;
+}
+
+.btn-try {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: -0.02em; /* Matches letter spacing of -2% */
+  background-color: #4f9cf9;
+  padding: 20px 40px;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  justify-content: center;
+}
+
+.yw-s5 .btn-try {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 195px;
+}
+
+.yw-s5 .s2-bg {
+  display: flex;
+  position: absolute; /* Positions the image relative to the .hero container */
+  align-items: top;
+  top: 0%;
+  left: 0%;
+  justify-content: top;
+  z-index: 1; /* Places it behind the hero content */
+  object-fit: cover; /* Ensures the image covers the area proportionally */
 }
