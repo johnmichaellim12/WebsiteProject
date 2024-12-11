@@ -639,21 +639,66 @@ body {
   gap: 98px; /* Ensures no additional spacing between child elements */
   background: #043873;
   z-index: 1;
+  color: #ffffff;
 }
 
-.head-s4 {
-  width: 1, 921px; /* Fixed width */
-  height: auto; /* Hug height, adjusts dynamically to the content */
-  display: flex; /* Flexbox for layout control */
-  flex-direction: column; /* Stack child elements vertically */
-  gap: 60px; /* Defines the vertical spacing between child elements */
-  text-align: center; /* Align content to the left */
-}
-
-.yw-s5 .p2-rg-int-c1 {
-  margin: 0px 220px;
+.yw-s5 .header-s5 {
+  width: 1481px;
+  display: flex;
+  justify-self: center;
   text-align: center;
   color: #fff;
+  gap: 60px;
+}
+
+.header-s5 {
+  height: auto; /* Adjusts height dynamically based on content */
+  display: flex; /* Flexbox for layout control */
+  flex-direction: column; /* Stacks child elements vertically */
+  gap: 60px; /* Vertical spacing between child elements */
+  text-align: center; /* Center-aligns text */
+  align-items: center; /* Centers items horizontally */
+  justify-content: center; /* Centers items vertically */
+  color: #ffffff; /* Text color */
+}
+
+.header-s5 .text-block-s5 {
+  width: 100%; /* Ensure the block stretches as needed */
+  max-width: 1010px; /* Add a max-width constraint */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px; /* Space between elements */
+  text-align: center; /* Center-aligns text */
+  margin: 0 auto; /* Ensures horizontal centering when not full width */
+}
+
+.header-h1-text-s5 {
+  font-family: "Inter", sans-serif; /* Use Inter font family */
+  font-size: 72px; /* Font size for H1 */
+  font-weight: 700; /* Bold font weight */
+  line-height: 87.14px; /* Line height for proper spacing */
+  letter-spacing: -0.02em; /* Adjust letter spacing */
+  text-align: left; /* Align text to the left */
+  text-underline-position: from-font; /* Default underline position */
+  text-decoration-skip-ink: none; /* Prevent underline skips */
+  color: #ffffff; /* Add a color to make it visible (adjust as needed) */
+}
+
+.p2-rg-int-c1-s5 {
+  font-family: "Inter", sans-serif; /* Font family */
+  font-size: 18px; /* Font size */
+  font-weight: 400; /* Regular font weight */
+  line-height: 30px; /* Line height for readability */
+  letter-spacing: -0.02em; /* Slightly tighter spacing */
+  text-align: center; /* Align text to the left */
+  color: #ffffff; /* Neutral dark color for text */
+  text-underline-position: auto; /* Natural underline positioning */
+  text-decoration-skip-ink: auto; /* Smooth underline skipping */
+  margin: 0; /* Remove default margins for flexibility */
+  justify-self: center;
+  align-self: center;
 }
 
 .btn-try {
@@ -682,14 +727,668 @@ body {
   width: 195px;
 }
 
-.yw-s5 .s2-bg {
-  display: block; /* No need for flex here */
-  position: absolute; /* Positions the image relative to the .yw-s5 container */
-  top: 0;
+.bbgs4-5 {
+  position: absolute; /* Place it in the flow */
+  top: calc(
+    100% + 4648px
+  ); /* Adjust to align with the bottom of the Pricing section */
   left: 0;
-  width: 602.84px;
-  height: 448.52px;
-  object-fit: cover; /* Ensures the image covers the container proportionally */
+  width: 680.74px; /* Ensure it stretches across the full width */
+  height: 691.34px; /* Adjust to fit content or specified dimensions */
+  z-index: 2; /* Behind content */
+}
 
-  z-index: -1; /* Places it behind the content */
+/* Your Data */
+
+.yd-s6 {
+  position: relative; /* Establishes a positioning context for child elements */
+  display: flex;
+  align-items: center;
+  height: 574px; /* Hug height allows flexibility with content size */
+  padding: 140px 220px; /* Applies even padding on top, right, bottom, and left */
+  overflow: hidden; /* Hides any content that overflows the container */
+  display: flex; /* For layout control if needed */
+  flex-direction: column; /* Stacks child elements vertically */
+  gap: 98px; /* Ensures no additional spacing between child elements */
+  background: #ffffff;
+  z-index: 1;
+  color: #212529;
+  height: 661.13px;
+}
+
+.header-yd-content {
+  display: flex;
+  align-items: center;
+}
+
+.heading-yd {
+  text-align: left; /* Aligns text to the left */
+  display: flex; /* Enables Flexbox layout */
+  flex-direction: column; /* Stacks child elements vertically */
+  align-items: left; /* Aligns all child elements to the left */
+  gap: 60px; /* Adds spacing between child elements */
+}
+
+.heading-yd .btn-try {
+  display: flex;
+  align-items: left;
+  text-align: left;
+  justify-content: left;
+  width: 197px;
+}
+
+.yd-s6 .yd-element-text {
+  display: flex;
+  position: absolute; /* Positions the image relative to the .hero container */
+  align-items: center;
+  margin-top: 111px;
+  justify-content: center;
+  right: 13%;
+  z-index: -1; /* Places it behind the hero content */
+
+  overflow: hidden; /* Ensures no extra space is rendered around the background */
+  width: 523.32px;
+  height: 69.79px;
+}
+
+/* Sponsors */
+
+.sponsors {
+  position: relative; /* Establishes a positioning context for child elements */
+  display: flex;
+  align-items: center;
+  height: 538px; /* Hug height allows flexibility with content size */
+  padding: 140px 220px; /* Applies even padding on top, right, bottom, and left */
+  overflow: hidden; /* Hides any content that overflows the container */
+  display: flex; /* For layout control if needed */
+  flex-direction: column; /* Stacks child elements vertically */
+  gap: 100px; /* Ensures no additional spacing between child elements */
+  background: #ffffff;
+  z-index: 1;
+  color: #212529;
+}
+
+.sponsored {
+  display: flex; /* Use Flexbox for layout */
+  justify-content: space-between; /* Distribute logos evenly */
+  align-items: center; /* Center logos vertically */
+  gap: 209px; /* Add consistent spacing between logos */
+}
+
+.heading-sp {
+  text-align: center; /* Aligns text to the left */
+  display: flex; /* Enables Flexbox layout */
+  flex-direction: column; /* Stacks child elements vertically */
+  align-items: center; /* Aligns all child elements to the left */
+  gap: 95px; /* Adds spacing between child elements */
+}
+
+.apps {
+  position: relative; /* Establishes a positioning context for child elements */
+  display: flex;
+  align-items: center;
+  height: 750.8px; /* Hug height allows flexibility with content size */
+  padding: 140px 220px; /* Applies even padding on top, right, bottom, and left */
+  overflow: hidden; /* Hides any content that overflows the container */
+  display: flex; /* For layout control if needed */
+  flex-direction: column; /* Stacks child elements vertically */
+  gap: 100px; /* Ensures no additional spacing between child elements */
+  background: #043873;
+  z-index: 1;
+  color: #ffffff;
+}
+
+.header-h1-text-s8 {
+  font-family: "Inter", sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 87.14px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
+}
+
+.p2-rg-int-c1-s8 {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #ffffff;
+  text-underline-position: auto;
+  text-decoration-skip-ink: auto;
+  margin: 0;
+  justify-self: left;
+  align-self: left;
+}
+
+.apps .text-block .p2-rg-int-c1-s8 {
+  width: 750px;
+}
+
+.apps .text-block .header-h1-text-s8 {
+  width: 550px;
+}
+
+.apps .btn-try {
+  width: 194px;
+}
+
+.head-s8 {
+  width: 798px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  text-align: left;
+}
+
+.img-s8 {
+  width: 582px;
+  height: 470.8px;
+  margin-right: 80px;
+}
+
+/* Client */
+
+.cs {
+  position: relative; /* Establishes a positioning context for child elements */
+  display: flex;
+  align-items: center;
+  height: 994.46px; /* Hug height allows flexibility with content size */
+  padding: 140px 220px; /* Applies even padding on top, right, bottom, and left */
+  overflow: hidden; /* Hides any content that overflows the container */
+  display: flex; /* For layout control if needed */
+  flex-direction: column; /* Stacks child elements vertically */
+  gap: 60px; /* Ensures no additional spacing between child elements */
+  background: #ffffff;
+  z-index: 1;
+  color: #ffffff;
+}
+
+.cs1 {
+  height: 520px;
+  width: 471.67px;
+  border-radius: 10px;
+  border: 1px solid #ffe492;
+  padding: 60px 40px;
+  gap: 60px;
+  background-color: #ffffff;
+  box-shadow: 15px 10px 50px 0px #0000001a; /* Adds a subtle shadow effect */
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 220px;
+  gap: 32px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px; /* Space between child elements */
+  padding-bottom: 32px; /* Adds space between the content and the border */
+  border-bottom: 1px solid #212529; /* Adds a bottom border */
+}
+
+.comment i {
+  font-size: 79px; /* Controls the size of the icon */
+  color: #212529; /* Set the color */
+}
+
+.name-box {
+  margin-top: 70px;
+  width: 383px; /* Fixed width */
+  height: auto; /* Adjusts height dynamically to the content */
+  display: flex; /* Flexbox for layout control */
+  flex-direction: row; /* Stack child elements vertically */
+  gap: 42px; /* Space between child elements */
+}
+
+.name {
+  width: 100%; /* Fill container width */
+  max-width: 246px; /* Limit the width to 246px */
+  height: 95px; /* Fixed height */
+  display: flex; /* Enables Flexbox for layout control */
+  flex-direction: column; /* Stack child elements vertically */
+  gap: 15px; /* Space between child elements */
+}
+
+.carousel-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between the dots */
+}
+
+.dot {
+  width: 12px; /* Circle size */
+  height: 12px;
+  border-radius: 50%; /* Makes the buttons circular */
+  background-color: #4f9cf9; /* Default color of the dots */
+  border: none; /* Removes default button styling */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  transition: background-color 0.3s ease; /* Smooth transition for hover or active state */
+}
+
+.dot:hover,
+.dot:focus {
+  background-color: #043873; /* Highlight color when hovered or focused */
+  outline: none; /* Removes focus ring for cleaner look */
+}
+
+.dot.active {
+  background-color: #043873; /* Active state color */
+}
+
+.ft-s10 {
+  position: relative; /* Establishes a positioning context for child elements */
+  display: flex;
+  align-items: center;
+  height: 705px; /* Hug height allows flexibility with content size */
+  padding: 140px 220px; /* Applies even padding on top, right, bottom, and left */
+  overflow: hidden; /* Hides any content that overflows the container */
+  display: flex; /* For layout control if needed */
+  flex-direction: column; /* Stacks child elements vertically */
+  gap: 200px; /* Ensures no additional spacing between child elements */
+  background: #043873;
+  z-index: 1;
+  color: #ffffff;
+}
+
+.header-s10 {
+  width: 1481px;
+  display: flex;
+  justify-self: center;
+  text-align: center;
+  color: #fff;
+  gap: 40px;
+}
+
+.header-s10 .text-block-s10 {
+  width: 608px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* Space between child elements */
+  text-align: center; /* Aligns text in the center */
+  margin: 0 auto; /* Centers the block horizontally */
+}
+
+.header-s10 .header-h1-text-s10 {
+  font-family: "Inter", sans-serif; /* Use Inter font family */
+  font-size: 72px; /* Font size for H1 */
+  font-weight: 700; /* Bold font weight */
+  line-height: 87.14px; /* Line height for proper spacing */
+  letter-spacing: -0.02em; /* Adjust letter spacing */
+  text-align: center; /* Align text to the left */
+  text-underline-position: from-font; /* Default underline position */
+  text-decoration-skip-ink: none; /* Prevent underline skips */
+  color: #ffffff; /* Add a color to make it visible (adjust as needed) */
+}
+
+.header-s10 .p2-rg-int-c1 {
+  font-family: "Inter", sans-serif; /* Font family */
+  font-size: 24px; /* Font size */
+  font-weight: 400; /* Regular font weight */
+  line-height: 32px; /* Line height for readability */
+  letter-spacing: -0.02em; /* Slightly tighter spacing */
+  text-align: left; /* Align text to the left */
+  color: #ffffff; /* Neutral dark color for text */
+  text-underline-position: auto; /* Natural underline positioning */
+  text-decoration-skip-ink: auto; /* Smooth underline skipping */
+  margin: 0; /* Remove default margins for flexibility */
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 10px;
+}
+
+.icons i {
+  font-size: 60px;
+  color: #ffffff;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #043873; /* Footer background */
+  color: #ffffff; /* Footer text color */
+  padding: 140px 220px 0 220px; /* Top padding, no bottom padding */
+  border-top: 1px solid #2e4e73; /* Adds a 1px white border at the top */
+}
+
+.footer-content {
+  width: 1480px;
+  margin: 0 auto 50px auto; /* Top and sides 0, bottom 30px */
+  display: flex;
+  flex-direction: column;
+  gap: 100px; /* Space between Info and footer-bottom */
+}
+
+.logo-description {
+  display: flex;
+  flex-direction: column;
+  width: 205.25px; /* Fill */
+  gap: 15px;
+}
+
+.logo-description .logo-footer-img {
+  width: 37px;
+  height: 29px;
+}
+
+.logo-footer-link {
+  display: inline-flex; /* Aligns img and p inline */
+  align-items: center; /* Vertically center-aligns img and p */
+  gap: 10px; /* Space between the logo image and the text */
+  text-decoration: none; /* Removes underline from the link */
+}
+
+.logo-description p {
+  display: flex;
+  flex-direction: column;
+  width: 205.25px; /* Fill */
+
+  gap: 15px;
+}
+
+.logo-description .header-h1-text-f {
+  font-family: "Inter", sans-serif; /* Use Inter font family */
+  font-size: 28px; /* Font size for H1 */
+  font-weight: 700; /* Bold font weight */
+  line-height: 33.89px; /* Line height for proper spacing */
+  text-align: left; /* Align text to the left */
+  text-underline-position: from-font; /* Default underline position */
+  text-decoration-skip-ink: none; /* Prevent underline skips */
+  color: #ffffff; /* Add a color to make it visible (adjust as needed) */
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  gap: 100px;
+  margin-bottom: 50px;
+}
+
+.info .p2-rg-int-c1 {
+  color: #ffffff;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 205.25px; /* Fill */
+  height: 127px; /* Hug */
+  gap: 15px;
+}
+
+.product ul {
+  display: flex;
+  flex-direction: column;
+  width: 205.25px; /* Fill */
+  height: 127px; /* Hug */
+  gap: 15px;
+  list-style: none; /* Removes list bullets or numbers */
+  padding: 0; /* Removes any default padding */
+}
+
+.product a {
+  color: #ffffff;
+  text-decoration: none; /* Removes underline from links */
+}
+
+.product .p1-sb-int {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.78px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
+}
+
+.resources {
+  display: flex;
+  flex-direction: column;
+  width: 205.25px; /* Fill */
+  height: 127px; /* Hug */
+  gap: 15px;
+}
+
+.resources ul {
+  display: flex;
+  flex-direction: column;
+  width: 205.25px; /* Fill */
+  height: 127px; /* Hug */
+  gap: 16px;
+  list-style: none; /* Removes list bullets or numbers */
+  padding: 0; /* Removes any default padding */
+}
+
+.resources a {
+  color: #ffffff;
+  text-decoration: none; /* Removes underline from links */
+}
+
+.resources .p1-sb-int {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.78px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  width: 205.25px; /* Fill */
+  height: 127px; /* Hug */
+  gap: 15px;
+}
+
+.company ul {
+  display: flex;
+  flex-direction: column;
+  width: 205.25px; /* Fill */
+  height: 127px; /* Hug */
+  gap: 16px;
+  list-style: none; /* Removes list bullets or numbers */
+  padding: 0; /* Removes any default padding */
+}
+
+.company a {
+  color: #ffffff;
+  text-decoration: none; /* Removes underline from links */
+}
+
+.company .p1-sb-int {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.78px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
+}
+
+.tryit {
+  display: flex;
+  flex-direction: column;
+
+  gap: 23px;
+}
+
+.tryit ul {
+  display: flex;
+  flex-direction: column;
+  width: 205.25px; /* Fill */
+  height: 127px; /* Hug */
+  gap: 16px;
+  list-style: none; /* Removes list bullets or numbers */
+  padding: 0; /* Removes any default padding */
+}
+
+.tryit a {
+  color: #ffffff;
+  text-decoration: none; /* Removes underline from links */
+}
+
+.tryit .p1-sb-int {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.78px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
+}
+
+.tryit .btn-try {
+  text-align: left;
+  width: 200px;
+  border-radius: 8px;
+  padding: 20px 40px;
+  gap: 10px;
+}
+
+.info-section {
+  flex: 1;
+}
+
+.info-section h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.info-section p,
+.info-section ul {
+  font-size: 14px;
+  margin: 0;
+}
+
+.info-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-section li {
+  margin-bottom: 8px;
+}
+
+.info-section a {
+  color: #ffffff;
+  text-decoration: none;
+
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.info-section p {
+  color: #ffffff;
+  text-decoration: none;
+
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.78px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.info-section a:hover {
+  text-decoration: underline;
+}
+
+.tryit .header5 {
+  font-family: "Inter", sans-serif; /* Font family */
+  font-size: 28px; /* Font size (Updated from 24px to 28px) */
+  font-weight: 700; /* Bold font weight */
+  line-height: 36px; /* Line height for readability */
+  letter-spacing: -0.02em; /* Slightly tighter spacing */
+  text-align: left; /* Align text to the left */
+  color: #ffffff; /* White color for text */
+  text-underline-position: from-font; /* Natural underline positioning */
+  text-decoration-skip-ink: none; /* Ensure no skipping of text decoration */
+  margin: 0; /* Remove default margins for flexibility */
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  font-size: 14px;
+  margin-bottom: 110px;
+  padding: 35px 0;
+  border-top: 1px solid #2e4e73; /* Keeps the border at the top */
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+
+.footer-info p {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.footer-info a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+.footer-social {
+  display: flex;
+  gap: 32px;
+}
+.footer-social a {
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  color: #1a73e8;
+}
+
+.footer-info a i {
+  padding: 0 6px; /* Adds space between icon and text */
+  font-size: 16px; /* Adjust icon size */
 }
