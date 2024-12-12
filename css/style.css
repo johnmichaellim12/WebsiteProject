@@ -1,3 +1,37 @@
+/* For the heading pan-left animation */
+@keyframes pan-left {
+  from {
+    transform: translateX(-100%); /* Start off-screen from the left */
+    opacity: 0; /* Start hidden */
+  }
+  to {
+    transform: translateX(0); /* End at its original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* For the background image pan-down animation */
+@keyframes pan-down {
+  from {
+    transform: translateY(-100%); /* Start above the screen */
+    opacity: 0; /* Start hidden */
+  }
+  to {
+    transform: translateY(0); /* End at its original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* For the background image fade-in animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* Reset */
 * {
   margin: 0;
@@ -38,6 +72,7 @@ body {
 }
 
 /* Navbar */
+
 .navbar {
   padding: 16px 220px;
   background-color: #043873;
@@ -101,6 +136,7 @@ body {
   line-height: 23px;
   color: #fff;
   text-decoration: none;
+  transition: background-color 0.3s ease; /* Smooth transition for hover or active state */
 }
 
 /* down-arrow */
@@ -131,6 +167,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  transition: background-color 0.3s ease; /* Smooth transition for hover or active state */
 }
 
 .btn-free-trial {
@@ -148,10 +185,6 @@ body {
   align-items: center;
   gap: 10px;
   transition: background-color 0.3s ease;
-}
-
-.btn-free-trial:hover {
-  background-color: #357dd9;
 }
 
 /* Hero */
@@ -177,6 +210,7 @@ body {
 
   z-index: -1; /* Places it behind the hero content */
   object-fit: cover; /* Ensures the image covers the area proportionally */
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
 }
 
 .hero-header {
@@ -194,10 +228,12 @@ body {
   text-align: left; /* Align content to the left */
   margin-top: 103px;
   margin-right: 50px;
+  animation: pan-left 1s ease-out forwards; /* Heading pan-left animation */
 }
 
 .hero-image {
   width: 100%;
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background image */
 }
 
 .header-h2 {
@@ -265,6 +301,7 @@ body {
   overflow: hidden; /* Ensures no extra space is rendered around the background */
   width: 678.74px;
   height: 65.55px;
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
 }
 
 .wm-s2 .s2-bg {
@@ -284,6 +321,14 @@ body {
   justify-content: center;
   z-index: 3;
   margin-bottom: 100px;
+}
+
+.c1 {
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
+}
+
+.c2 {
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
 }
 
 .wm-c2-content {
@@ -306,6 +351,7 @@ body {
   align-items: flex-start;
   gap: 60px; /* Space between elements */
   margin-right: 70px;
+  animation: pan-left 1s ease-out forwards; /* Heading pan-left animation */
 }
 
 .header-h1-text {
@@ -362,14 +408,15 @@ body {
   display: flex;
   position: absolute; /* Positions the image relative to the .hero container */
   align-items: center;
-  margin-top: 200px;
+  margin-top: 185px;
   justify-content: center;
-  right: 15%;
+  margin-left: 910px;
   z-index: -1; /* Places it behind the hero content */
 
   overflow: hidden; /* Ensures no extra space is rendered around the background */
   width: 400px;
-  height: 28.81px;
+  height: 50px;
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
 }
 
 .text-block {
@@ -378,6 +425,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   gap: 24px; /* Space between elements */
+  animation: pan-down 1s ease-out forwards; /* Apply pan-down animation */
 }
 
 /* Use an Extension */
@@ -396,6 +444,21 @@ body {
   z-index: 1;
 }
 
+.ue-s3 .ue-element {
+  display: flex;
+  position: absolute; /* Positions the image relative to the .hero container */
+  align-items: center;
+  margin-top: 29px;
+  justify-content: center;
+  margin-left: 209px;
+  z-index: -1; /* Places it behind the hero content */
+
+  overflow: hidden; /* Ensures no extra space is rendered around the background */
+  width: 395px;
+  height: 50px;
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
+}
+
 .head-s3 {
   height: auto; /* Hug height, adjusts dynamically to the content */
   display: flex; /* Flexbox for layout control */
@@ -404,6 +467,7 @@ body {
   text-align: left; /* Align content to the left */
   margin-top: 103px;
   margin-right: 50px;
+  animation: pan-left 1s ease-out forwards; /* Heading pan-left animation */
 }
 
 .ue-s3 .btn-gs {
@@ -433,6 +497,7 @@ body {
   flex-direction: column; /* Stack child elements vertically */
   gap: 60px; /* Defines the vertical spacing between child elements */
   text-align: left; /* Align content to the left */
+  animation: pan-left 1s ease-out forwards; /* Heading pan-left animation */
 }
 
 .c-margin-left {
@@ -447,6 +512,7 @@ body {
   width: 843px;
   height: 410px;
   gap: 4px;
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
 }
 
 .c-element {
@@ -461,6 +527,7 @@ body {
   overflow: hidden; /* Ensures no extra space is rendered around the background */
   width: 523.32px;
   height: 69.79px;
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
 }
 
 /* Pricing */
@@ -474,8 +541,8 @@ body {
   overflow: hidden; /* Hides any content that overflows the container */
   display: flex; /* For layout control if needed */
   flex-direction: column; /* Stacks child elements vertically */
-  gap: 60px; /* Ensures no additional spacing between child elements */
-
+  gap: 20px; /* Ensures no additional spacing between child elements */
+  background-color: #fafafa;
   z-index: 1;
 }
 
@@ -490,64 +557,42 @@ body {
   text-align: center;
 }
 
-.price-list {
+.cyp .cyp-element {
   display: flex;
-  flex-direction: row;
-  padding: 140px 220px; /* Applies even padding on top, right, bottom, and left */
+  position: absolute; /* Positions the image relative to the .hero container */
+  align-items: center;
+  margin-top: 12px;
+  justify-content: center;
+  margin-left: 399px;
+  z-index: -1; /* Places it behind the hero content */
 
+  overflow: hidden; /* Ensures no extra space is rendered around the background */
+  width: 410px;
+  height: 80px;
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
+}
+
+.price-list {
+  padding: 100px 220px; /* Applies even padding on top, right, bottom, and left */
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
+}
+
+.price-grid {
+  display: flex;
+  /* grid-template-columns: repeat(3, 1fr); */
   gap: 32px;
 }
 
-.price-board1 {
+.price-board {
+  height: 638.56px;
   width: 472.33px;
   border-radius: 10px;
   border: 1px solid #ffe492; /* Add 'solid' to define the border style */
   padding: 40px 44px;
-  gap: 25px;
   background-color: #fff;
 }
 
-.price-board1 .btn-gs {
-  display: flex;
-  align-items: center;
-  width: 155px;
-  background-color: #fff;
-  border: 1px solid #ffe492; /* Add 'solid' to define the border style */
-  color: #212529;
-  padding: 16px 40px;
-  border-radius: 8px;
-}
-
-.price-board2 {
-  width: 472.33px;
-  border-radius: 10px;
-  border: 1px solid #ffe492; /* Add 'solid' to define the border style */
-  padding: 40px 44px;
-  gap: 25px;
-  background-color: #fff;
-}
-
-.price-board2 .btn-gs {
-  display: flex;
-  align-items: center;
-  width: 155px;
-  background-color: #fff;
-  border: 1px solid #ffe492; /* Add 'solid' to define the border style */
-  color: #212529;
-  padding: 16px 40px;
-  border-radius: 8px;
-}
-
-.price-board3 {
-  width: 472.33px;
-  border-radius: 10px;
-  border: 1px solid #ffe492; /* Add 'solid' to define the border style */
-  padding: 40px 44px;
-  gap: 25px;
-  background-color: #fff;
-}
-
-.price-board3 .btn-gs {
+.price-board .btn-gs {
   display: flex;
   align-items: center;
   width: 155px;
@@ -642,6 +687,21 @@ body {
   color: #ffffff;
 }
 
+.yw-s5 .yw-element {
+  display: flex;
+  position: absolute; /* Positions the image relative to the .hero container */
+  align-items: center;
+  margin-top: 63px;
+  justify-content: center;
+  margin-left: 743px;
+  z-index: -1; /* Places it behind the hero content */
+
+  overflow: hidden; /* Ensures no extra space is rendered around the background */
+  width: 290px;
+  height: 23.96px;
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
+}
+
 .yw-s5 .header-s5 {
   width: 1481px;
   display: flex;
@@ -672,6 +732,7 @@ body {
   gap: 24px; /* Space between elements */
   text-align: center; /* Center-aligns text */
   margin: 0 auto; /* Ensures horizontal centering when not full width */
+  animation: pan-down 1s ease-out forwards; /* Background pan-down animation */
 }
 
 .header-h1-text-s5 {
@@ -718,6 +779,7 @@ body {
   transition: background-color 0.3s ease;
   text-align: center;
   justify-content: center;
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
 }
 
 .yw-s5 .btn-try {
@@ -730,12 +792,19 @@ body {
 .bbgs4-5 {
   position: absolute; /* Place it in the flow */
   top: calc(
-    100% + 4648px
+    100% + 4326px
   ); /* Adjust to align with the bottom of the Pricing section */
   left: 0;
-  width: 680.74px; /* Ensure it stretches across the full width */
-  height: 691.34px; /* Adjust to fit content or specified dimensions */
+  width: 680.74px; /* Set the image width */
+  height: 691.34px; /* Set the image height */
   z-index: 2; /* Behind content */
+
+  /* Lock the scale with transform: scale(1) to prevent resizing on zoom */
+  transform: scale(1);
+  transform-origin: top left; /* Locks the image to the top-left corner */
+
+  /* Optional: Prevent zooming effect on resizing */
+  will-change: transform;
 }
 
 /* Your Data */
@@ -756,6 +825,24 @@ body {
   height: 661.13px;
 }
 
+.yd-s6 .yd-element {
+  display: flex;
+  position: absolute; /* Positions the image relative to the .hero container */
+  left: 0%;
+  margin-left: 417px;
+  margin-top: 103px;
+
+  z-index: -1; /* Places it behind the hero content */
+
+  overflow: hidden; /* Ensures no extra space is rendered around the background */
+  width: 310px;
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
+}
+
+.yd-img {
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
+}
+
 .header-yd-content {
   display: flex;
   align-items: center;
@@ -767,6 +854,7 @@ body {
   flex-direction: column; /* Stacks child elements vertically */
   align-items: left; /* Aligns all child elements to the left */
   gap: 60px; /* Adds spacing between child elements */
+  animation: pan-in 1s ease-out forwards; /* Heading pan-in animation */
 }
 
 .heading-yd .btn-try {
@@ -808,6 +896,20 @@ body {
   color: #212529;
 }
 
+.sponsors .sp-element {
+  display: flex;
+  position: absolute; /* Positions the image relative to the .hero container */
+
+  margin-left: 170px;
+  margin-top: 60px;
+
+  z-index: -1; /* Places it behind the hero content */
+
+  overflow: hidden; /* Ensures no extra space is rendered around the background */
+  width: 310px;
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
+}
+
 .sponsored {
   display: flex; /* Use Flexbox for layout */
   justify-content: space-between; /* Distribute logos evenly */
@@ -821,6 +923,7 @@ body {
   flex-direction: column; /* Stacks child elements vertically */
   align-items: center; /* Aligns all child elements to the left */
   gap: 95px; /* Adds spacing between child elements */
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
 }
 
 .apps {
@@ -834,8 +937,18 @@ body {
   flex-direction: column; /* Stacks child elements vertically */
   gap: 100px; /* Ensures no additional spacing between child elements */
   background: #043873;
-  z-index: 1;
+  z-index: 2;
   color: #ffffff;
+}
+
+.apps-bg {
+  display: flex;
+  position: absolute; /* Positions the image relative to the .hero container */
+  top: 10px;
+
+  z-index: -1; /* Places it behind the hero content */
+  object-fit: cover; /* Ensures the image covers the area proportionally */
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
 }
 
 .header-h1-text-s8 {
@@ -884,12 +997,14 @@ body {
   flex-direction: column;
   gap: 60px;
   text-align: left;
+  animation: pan-in 1s ease-out forwards; /* Heading pan-in animation */
 }
 
 .img-s8 {
   width: 582px;
   height: 470.8px;
   margin-right: 80px;
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
 }
 
 /* Client */
@@ -909,11 +1024,26 @@ body {
   color: #ffffff;
 }
 
+.cs .cs-element {
+  display: flex;
+  position: absolute; /* Positions the image relative to the .hero container */
+
+  margin-left: 590px;
+  margin-top: 60px;
+
+  z-index: -1; /* Places it behind the hero content */
+
+  overflow: hidden; /* Ensures no extra space is rendered around the background */
+  width: 240px;
+  height: 47.67px;
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
+}
+
 .cs1 {
   height: 520px;
   width: 471.67px;
   border-radius: 10px;
-  border: 1px solid #ffe492;
+
   padding: 60px 40px;
   gap: 60px;
   background-color: #ffffff;
@@ -925,6 +1055,7 @@ body {
   flex-direction: row;
   padding: 10px 220px;
   gap: 32px;
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
 }
 
 .comment {
@@ -939,7 +1070,7 @@ body {
 
 .comment i {
   font-size: 79px; /* Controls the size of the icon */
-  color: #212529; /* Set the color */
+  color: #043873; /* Set the color */
 }
 
 .name-box {
@@ -975,12 +1106,7 @@ body {
   border: none; /* Removes default button styling */
   cursor: pointer; /* Pointer cursor for interactivity */
   transition: background-color 0.3s ease; /* Smooth transition for hover or active state */
-}
-
-.dot:hover,
-.dot:focus {
-  background-color: #043873; /* Highlight color when hovered or focused */
-  outline: none; /* Removes focus ring for cleaner look */
+  animation: fade-in 1.5s ease-out forwards; /* Fade-in animation for background */
 }
 
 .dot.active {
@@ -991,7 +1117,7 @@ body {
   position: relative; /* Establishes a positioning context for child elements */
   display: flex;
   align-items: center;
-  height: 705px; /* Hug height allows flexibility with content size */
+  height: 735px; /* Hug height allows flexibility with content size */
   padding: 140px 220px; /* Applies even padding on top, right, bottom, and left */
   overflow: hidden; /* Hides any content that overflows the container */
   display: flex; /* For layout control if needed */
@@ -1008,7 +1134,6 @@ body {
   justify-self: center;
   text-align: center;
   color: #fff;
-  gap: 40px;
 }
 
 .header-s10 .text-block-s10 {
@@ -1020,6 +1145,7 @@ body {
   gap: 40px; /* Space between child elements */
   text-align: center; /* Aligns text in the center */
   margin: 0 auto; /* Centers the block horizontally */
+  animation: pan-down 1s ease-out forwards; /* Background pan-down animation */
 }
 
 .header-s10 .header-h1-text-s10 {
@@ -1058,6 +1184,7 @@ body {
 .icons i {
   font-size: 60px;
   color: #ffffff;
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
 /* Footer */
@@ -1326,10 +1453,6 @@ body {
   text-decoration-skip-ink: none;
 }
 
-.info-section a:hover {
-  text-decoration: underline;
-}
-
 .tryit .header5 {
   font-family: "Inter", sans-serif; /* Font family */
   font-size: 28px; /* Font size (Updated from 24px to 28px) */
@@ -1371,9 +1494,6 @@ body {
   text-decoration: none;
 }
 
-.footer-info a:hover {
-  text-decoration: underline;
-}
 .footer-social {
   display: flex;
   gap: 32px;
@@ -1384,11 +1504,173 @@ body {
   text-decoration: none;
 }
 
-.footer-social a:hover {
-  color: #1a73e8;
-}
-
 .footer-info a i {
   padding: 0 6px; /* Adds space between icon and text */
   font-size: 16px; /* Adjust icon size */
+}
+
+/* Button hover */
+
+.nav-menu ul li a:hover {
+  color: #ffe492;
+}
+
+.nav-menu ul li a:after {
+  color: #fff;
+}
+
+.login-btn:hover {
+  background-color: #4f9cf9;
+  color: #fff;
+}
+
+.btn-free-trial:hover {
+  background-color: #ffe492;
+  color: #043873;
+}
+
+.btn-gs:hover {
+  background-color: #ffe492;
+  color: #043873;
+}
+
+.btn-try:hover {
+  background-color: #ffe492;
+  color: #043873;
+}
+
+/* Base styles for price boards */
+.price-grid .price-board {
+  position: relative; /* Ensure all price boards are positioned relatively */
+  transition: 0.5s; /* Smooth transition */
+  padding: 40px 44px; /* Default padding for all price boards */
+}
+
+/* Hover effect for price-board */
+.price-grid .price-board:hover {
+  background: #043873; /* Change background color */
+  color: #fff; /* Change text color */
+  transform: scale(1.1); /* Expand price-board */
+  z-index: 2; /* Ensure the hovered board stays above the others */
+  padding: 80px 44px;
+  height: auto;
+}
+
+/* Change color for the elements inside price-board */
+.price-grid .price-board:hover .p1-sb-int,
+.price-grid .price-board:hover .p3-rg-int {
+  color: #fff; /* Change text color to white */
+}
+
+.price-grid .price-board:hover .header-h4-text {
+  color: #ffe492; /* Change text color to white */
+}
+
+.price-grid .price-board:hover .bullet-point i {
+  color: #ffe492; /* Change text color to white */
+}
+
+/* Optional: Add a different color for the "Get Started" button */
+.price-grid .price-board:hover .btn-gs {
+  background: #4f9cf9; /* Change background color */
+  color: #fff; /* Change text color */
+  border: none; /* Remove border */
+}
+
+/* Optional: Add a different color for the "Get Started" button */
+.price-grid .price-board:hover .btn-gs:hover {
+  background-color: #ffe492;
+  color: #043873;
+  border: none; /* Remove border */
+}
+
+/* Clients Hover */
+
+.card .cs1:hover {
+  transition: 0.5s; /* Smooth transition */
+  box-shadow: none;
+  background-color: #4f9cf9;
+}
+
+.card .cs1:hover .comment {
+  border-bottom: 1px solid #fff; /* Adds a bottom border */
+}
+
+.card .cs1:hover .comment i {
+  color: #fff; /* Adds a bottom border */
+}
+
+.card .cs1:hover .p2-rg-int-c1 {
+  color: #fff;
+}
+
+.card .cs1:hover .p1-sb-int {
+  color: #043873;
+}
+
+.card .cs1:hover .p3-rg-int {
+  color: #fff;
+}
+
+.dot:hover,
+.dot:focus {
+  background-color: #043873; /* Highlight color when hovered or focused */
+  outline: none; /* Removes focus ring for cleaner look */
+}
+
+.card .cs1.active {
+  transition: 0.5s; /* Smooth transition for animation */
+  background-color: #4f9cf9; /* Active background color */
+  box-shadow: none;
+}
+
+.card .cs1.active .comment {
+  border-bottom: 1px solid #fff; /* Adds a bottom border */
+}
+
+.card .cs1.active .comment i {
+  color: #fff; /* Adds a bottom border */
+}
+
+.card .cs1.active .p2-rg-int-c1 {
+  color: #fff;
+}
+
+.card .cs1.active .p1-sb-int {
+  color: #043873;
+}
+
+.card .cs1.active .p3-rg-int {
+  color: #fff;
+}
+
+.carousel-pagination .dot.active {
+  color: #fff;
+}
+
+/* Footer */
+
+.icons i:hover {
+  color: #ffe492; /* Change color only for the hovered icon */
+}
+
+.product a:hover {
+  color: #ffe492;
+}
+
+.resources a:hover {
+  color: #ffe492;
+}
+
+.company a:hover {
+  color: #ffe492;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+  color: #ffe492;
+}
+
+.footer-social a:hover {
+  color: #ffe492;
 }
