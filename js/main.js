@@ -18,6 +18,36 @@ document.querySelectorAll(".nav-link").forEach((link) => {
   });
 });
 
+window.addEventListener("scroll", function () {
+  var header = document.querySelector(".navbar");
+  header.classList.toggle("sticky", window.scrollY > 0);
+});
+
+// Create an intersection observer to detect when the elements enter the viewport
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Add the 'activated' class to the element to trigger the animation
+        entry.target.classList.add("activated");
+        // Once the animation is applied, stop observing the element
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.5, // Trigger when 50% of the element is in the viewport
+  }
+);
+
+// Target elements to observe
+const heading = document.querySelector(".hero-header .heading");
+const heroBg = document.querySelector(".hero-bg");
+
+// Start observing
+observer.observe(heading);
+observer.observe(heroBg);
+
 // Clients
 
 // Select all the .cs1 elements and dots

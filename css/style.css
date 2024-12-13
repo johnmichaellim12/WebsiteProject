@@ -32,6 +32,48 @@
   }
 }
 
+@keyframes appear {
+  from {
+    opacity: 0;
+    clip-path: inset(100% 100% 0 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(100% 100% 0 0);
+  }
+}
+
+.hero
+  .wm-s2
+  .ue-s3
+  .customize-s4
+  .cyp
+  .bbgs4-5
+  .yw-s5
+  .yd-s6
+  .sponsors
+  .apps
+  .cs
+  .ft-s10
+  .footer {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+/* Sticky state for navbar */
+.navbar.sticky {
+  position: fixed; /* Sticks to the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it stays on top of other elements */
+  background-color: #043873; /* Retain background color */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for effect */
+  padding: 10px 220px; /* Slightly adjust padding for sticky state */
+  transition: all 0.3s ease; /* Smooth transition for sticky effect */
+}
+
 /* Reset */
 * {
   margin: 0;
@@ -792,7 +834,7 @@ body {
 .bbgs4-5 {
   position: absolute; /* Place it in the flow */
   top: calc(
-    100% + 4326px
+    100% + 4236px
   ); /* Adjust to align with the bottom of the Pricing section */
   left: 0;
   width: 680.74px; /* Set the image width */
@@ -1554,6 +1596,7 @@ body {
   z-index: 2; /* Ensure the hovered board stays above the others */
   padding: 80px 44px;
   height: auto;
+  border: none;
 }
 
 /* Change color for the elements inside price-board */
@@ -1590,6 +1633,7 @@ body {
   transition: 0.5s; /* Smooth transition */
   box-shadow: none;
   background-color: #4f9cf9;
+  border: none;
 }
 
 .card .cs1:hover .comment {
