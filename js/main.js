@@ -40,14 +40,6 @@ const observer = new IntersectionObserver(
   }
 );
 
-// Target elements to observe
-const heading = document.querySelector(".hero-header .heading");
-const heroBg = document.querySelector(".hero-bg");
-
-// Start observing
-observer.observe(heading);
-observer.observe(heroBg);
-
 // Clients
 
 // Select all the .cs1 elements and dots
