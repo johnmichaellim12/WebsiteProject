@@ -637,7 +637,7 @@ body {
 .price-board .btn-gs {
   display: flex;
   align-items: center;
-  width: 155px;
+  width: 165px;
   background-color: #fff;
   border: 1px solid #ffe492; /* Add 'solid' to define the border style */
   color: #212529;
@@ -766,7 +766,7 @@ body {
 
 .header-s5 .text-block-s5 {
   width: 100%; /* Ensure the block stretches as needed */
-  max-width: 1010px; /* Add a max-width constraint */
+  max-width: 1025px; /* Add a max-width constraint */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -828,7 +828,7 @@ body {
   display: flex;
   justify-content: center;
   align-self: center;
-  width: 195px;
+  width: 200px;
 }
 
 .bbgs4-5 {
@@ -904,7 +904,7 @@ body {
   align-items: left;
   text-align: left;
   justify-content: left;
-  width: 197px;
+  width: 210px;
 }
 
 .yd-s6 .yd-element-text {
@@ -1029,7 +1029,7 @@ body {
 }
 
 .apps .btn-try {
-  width: 194px;
+  width: 210px;
 }
 
 .head-s8 {
@@ -1514,7 +1514,7 @@ body {
   align-items: center;
   gap: 0;
   font-size: 14px;
-  margin-bottom: 110px;
+
   padding: 35px 0;
   border-top: 1px solid #2e4e73; /* Keeps the border at the top */
 }
