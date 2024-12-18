@@ -766,7 +766,7 @@ body {
 
 .header-s5 .text-block-s5 {
   width: 100%; /* Ensure the block stretches as needed */
-  max-width: 1025px; /* Add a max-width constraint */
+  max-width: 1050px; /* Add a max-width constraint */
   display: flex;
   flex-direction: column;
   justify-content: center;
